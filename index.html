@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Подготовка к ЕГЭ по истории — СМИТАП</title>
+<meta name="description" content="Годовой онлайн-курс подготовки к ЕГЭ по истории с Элей Смит: вебинары, практика по критериям ЕГЭ, наставник и регулярные пробники.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF7F0; --bg-2:#F3ECE0; --card:#FFFFFF; --ink:#1D1A16; --ink-2:#3B352E; --muted:#6F675D;
+  --line:#E6DDCF; --accent:#D9532B; --accent-ink:#fff; --accent-soft:#FBE3D8;
+  --ochre:#F2C14E; --ochre-soft:#FCEFC9; --green:#2F6B4F; --green-soft:#DCEDE3; --navy:#22304A;
+  --r-lg:28px; --r-md:20px; --r-sm:12px;
+  --shadow:0 1px 2px rgba(29,26,22,.04),0 8px 24px rgba(29,26,22,.06);
+  --wrap:1200px; --gutter:24px;
+  --f-head:"Unbounded",system-ui,sans-serif; --f-body:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:500 16px/1.55 var(--f-body);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+input{font:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+section{padding:72px 0;scroll-margin-top:72px}
+h1,h2,h3{font-family:var(--f-head);font-weight:600;letter-spacing:-.02em;line-height:1.12}
+h2{font-size:clamp(26px,3.4vw,42px);margin-bottom:12px}
+.lead{color:var(--muted);font-size:18px;max-width:640px}
+.sec-head{margin-bottom:40px}
+.mark{background:linear-gradient(transparent 55%,var(--ochre) 55%);padding:0 .08em}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:56px;padding:0 28px;border-radius:999px;font-weight:700;font-size:16px;transition:transform .15s,background .2s,box-shadow .2s;white-space:nowrap}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--accent);color:var(--accent-ink);box-shadow:0 6px 18px rgba(217,83,43,.28)}
+.btn-primary:hover{background:#C4461F}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#000}
+.btn-ghost{background:transparent;border:1.5px solid var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-sm{height:44px;padding:0 20px;font-size:15px}
+.link-arrow{display:inline-flex;align-items:center;gap:6px;font-weight:700;border-bottom:1.5px solid currentColor;padding-bottom:2px}
+.chip{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-radius:999px;font-size:13px;font-weight:700;background:var(--bg-2);color:var(--ink-2)}
+.chip-accent{background:var(--accent-soft);color:#A93B18}
+.chip-green{background:var(--green-soft);color:var(--green)}
+.chip-ochre{background:var(--ochre-soft);color:#7A5A06}
+.chip-outline{background:transparent;border:1.5px solid var(--ink);color:var(--ink)}
+
+/* header */
+.header{position:sticky;top:0;z-index:50;background:rgba(251,247,240,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+.header.scrolled{border-color:var(--line)}
+.header .wrap{display:flex;align-items:center;gap:32px;height:72px}
+.logo{font-family:var(--f-head);font-weight:700;font-size:20px;letter-spacing:-.01em;display:flex;align-items:center;gap:8px}
+.logo i{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--ink);color:var(--ochre);font-style:normal;font-size:15px}
+.nav{display:flex;gap:24px;font-weight:600;font-size:15px;color:var(--ink-2)}
+.nav a:hover{color:var(--accent)}
+.header-right{margin-left:auto;display:flex;align-items:center;gap:20px}
+.phone{font-weight:700;font-size:15px;white-space:nowrap}
+.burger{display:none;width:44px;height:44px;border-radius:12px;background:var(--bg-2);place-items:center}
+
+/* hero */
+.hero{padding:40px 0 72px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:stretch}
+.hero-card{background:var(--card);border-radius:var(--r-lg);padding:44px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.hero-eyebrow{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.hero h1{font-size:clamp(30px,4vw,52px);margin-bottom:18px}
+.hero h1 span{color:var(--accent)}
+.hero-desc{color:var(--ink-2);font-size:17px;margin-bottom:28px;max-width:560px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.fact{background:var(--bg);border-radius:var(--r-sm);padding:14px 16px}
+.fact small{display:block;color:var(--muted);font-size:13px;font-weight:600}
+.fact b{font-size:18px;font-weight:800}
+.timer{display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:var(--ink);color:#fff;border-radius:var(--r-md);padding:16px 20px;margin-bottom:24px}
+.timer p{font-size:14px;font-weight:600;line-height:1.35;flex:1;min-width:180px}
+.timer p b{color:var(--ochre)}
+.timer-digits{display:flex;gap:6px}
+.timer-digits div{min-width:52px;text-align:center;background:rgba(255,255,255,.1);border-radius:10px;padding:6px 4px}
+.timer-digits b{display:block;font-family:var(--f-head);font-size:20px;font-weight:600;font-variant-numeric:tabular-nums}
+.timer-digits small{font-size:11px;opacity:.7}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:auto}
+.hero-media{position:relative;border-radius:var(--r-lg);overflow:hidden;min-height:520px;background:linear-gradient(160deg,#2B3A57 0%,#1F2A40 60%,#18202F 100%);color:#fff}
+.hero-media .pattern{position:absolute;inset:0;opacity:.14}
+.portrait{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:78%;max-width:420px}
+.bubble{position:absolute;background:#fff;color:var(--ink);border-radius:22px;padding:12px 16px;font-weight:700;font-size:14px;line-height:1.3;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.bubble-name{top:24px;left:24px;border-radius:16px}
+.bubble-name small{display:block;font-weight:600;color:var(--muted);font-size:12px}
+.bubble-score{top:120px;right:22px;max-width:190px;background:var(--ochre)}
+.play{position:absolute;right:22px;bottom:22px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 18px 8px 8px;font-weight:700;font-size:14px;color:#fff}
+.play i{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--accent)}
+.ph-label{position:absolute;left:22px;bottom:30px;font-size:12px;opacity:.6;font-weight:600}
+.ratings{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:12px;margin-top:24px}
+.rating{background:var(--card);border-radius:var(--r-md);padding:18px 20px;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:center}
+.rating b{font-family:var(--f-head);font-size:24px;font-weight:600}
+.rating b small{font-size:15px;color:var(--muted);font-weight:500}
+.rating span{font-size:14px;color:var(--muted);font-weight:600}
+.rating .stars{color:var(--ochre);letter-spacing:2px;font-size:14px}
+.rating-main{background:var(--accent);color:#fff}
+.rating-main span{color:rgba(255,255,255,.85)}
+
+/* how */
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.how-card{background:var(--card);border-radius:var(--r-md);padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px}
+.how-card .ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:24px}
+.how-card h3{font-size:17px;font-weight:600;line-height:1.25}
+.how-card p{font-size:14.5px;color:var(--muted);line-height:1.5}
+.how-card.wide{grid-column:span 2;background:var(--navy);color:#fff}
+.how-card.wide p{color:rgba(255,255,255,.75)}
+.platform-mock{margin-top:auto;background:rgba(255,255,255,.08);border-radius:14px;padding:14px;display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.platform-mock div{height:44px;border-radius:8px;background:rgba(255,255,255,.1);padding:6px;font-size:10px;font-weight:700;color:rgba(255,255,255,.7)}
+.platform-mock div.a{background:var(--accent)}
+.platform-mock div.o{background:var(--ochre);color:var(--ink)}
+.platform-mock div.g{background:#4E9B76}
+.how-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:28px;background:var(--bg-2);border-radius:var(--r-md);padding:20px 24px}
+.how-foot p{font-weight:700}
+.how-foot .row{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+
+/* features */
+.features{background:var(--ink);color:#fff;border-radius:var(--r-lg);padding:56px;margin:0 auto}
+.features h2{color:#fff}
+.features .lead{color:rgba(255,255,255,.65)}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.12);border-radius:var(--r-md);overflow:hidden;margin-top:36px}
+.feat{background:var(--ink);padding:28px;display:flex;flex-direction:column;gap:10px}
+.feat .n{font-family:var(--f-head);font-size:14px;color:var(--ochre)}
+.feat h3{font-size:18px;font-weight:600;line-height:1.3}
+.feat p{font-size:14.5px;color:rgba(255,255,255,.66)}
+
+/* finance */
+.finance{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;background:var(--ochre);border-radius:var(--r-lg);padding:40px 48px;position:relative;overflow:hidden}
+.finance h2{font-size:clamp(24px,2.8vw,34px)}
+.fin-list{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.fin-list span{background:rgba(255,255,255,.6);border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px}
+.finance .coin{position:absolute;right:-30px;top:-40px;width:180px;opacity:.18}
+
+/* teacher */
+.teacher{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+.t-photo{position:relative;aspect-ratio:1/1;border-radius:50%;background:radial-gradient(circle at 30% 30%,#F6D27A,#E9A73E);overflow:hidden;max-width:500px;width:100%;justify-self:center}
+.t-photo svg.portrait{width:80%}
+.t-photo .badge{position:absolute;top:16%;right:4%;background:#fff;border-radius:999px;padding:10px 16px;font-weight:800;font-size:14px;box-shadow:var(--shadow);transform:rotate(6deg)}
+.t-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.t-name{font-size:clamp(30px,3.6vw,44px)}
+.t-sub{color:var(--muted);font-weight:600;margin-bottom:24px}
+.t-socials{display:flex;gap:8px;margin-bottom:28px}
+.t-socials a{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-weight:800;font-size:13px;background:#fff;transition:border-color .2s}
+.t-socials a:hover{border-color:var(--ink)}
+.t-facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.t-fact{background:var(--card);border-radius:var(--r-md);padding:18px 20px;box-shadow:var(--shadow)}
+.t-fact b{font-family:var(--f-head);font-size:26px;font-weight:600;display:block;line-height:1.1;margin-bottom:4px}
+.t-fact span{font-size:14px;color:var(--muted);font-weight:600}
+.t-fact.hl{background:var(--accent);color:#fff}
+.t-fact.hl span{color:rgba(255,255,255,.85)}
+.t-edu{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.t-edu li{display:flex;gap:12px;align-items:flex-start;font-weight:600}
+.t-edu li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:9px}
+
+/* tariffs */
+.tabs{display:inline-flex;background:var(--bg-2);border-radius:999px;padding:4px;margin-bottom:28px}
+.tab{height:44px;padding:0 22px;border-radius:999px;font-weight:700;font-size:15px;color:var(--muted)}
+.tab[aria-selected="true"]{background:var(--ink);color:#fff}
+.car{position:relative}
+.car-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 32px)/3);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 12px}
+.car-track::-webkit-scrollbar{display:none}
+.car-nav{display:flex;gap:8px}
+.car-nav button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font-size:18px}
+.car-nav button:disabled{opacity:.25;cursor:default}
+.tariff-top{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.tcard{scroll-snap-align:start;background:var(--card);border-radius:var(--r-lg);padding:28px;box-shadow:var(--shadow);display:flex;flex-direction:column;border:2px solid transparent;transition:border-color .3s,box-shadow .3s}
+.tcard.featured{background:linear-gradient(180deg,#FFF4EC 0%,#fff 45%);border-color:var(--accent)}
+.tcard.flash{box-shadow:0 0 0 6px rgba(217,83,43,.25)}
+.tcard .chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.tcard h3{font-size:22px;margin-bottom:4px}
+.tcard .note{color:var(--accent);font-weight:700;font-size:14px;margin-bottom:18px;min-height:21px}
+.tcard ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:20px;font-size:15px}
+.tcard li{display:flex;gap:10px;align-items:flex-start}
+.tcard li::before{content:"";flex:none;width:18px;height:18px;margin-top:2px;border-radius:50%;background:var(--green-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.2l2.6 2.6L13 6.4' fill='none' stroke='%232F6B4F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat}
+.tcard li.plus::before{background-color:var(--accent-soft);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M9 5v8M5 9h8' fill='none' stroke='%23D9532B' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E")}
+.tcard li.plus-sep::before{display:none}
+.tcard .plus-sep{font-size:13px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.04em;margin:4px 0 -2px}
+.tcard .price{margin-top:auto;padding-top:18px;border-top:1px dashed var(--line);display:flex;align-items:baseline;gap:6px;margin-bottom:16px}
+.tcard .price b{font-family:var(--f-head);font-size:30px;font-weight:600}
+.tcard .price span{color:var(--muted);font-weight:600}
+.tcard .btn{width:100%}
+.tcard-promo{background:var(--navy);color:#fff;gap:14px;justify-content:flex-end;min-height:360px;background-image:radial-gradient(circle at 85% 15%,rgba(242,193,78,.35),transparent 45%)}
+.tcard-promo h3{font-size:24px}
+.tcard-promo p{color:rgba(255,255,255,.75);margin-bottom:8px}
+.car-nav.hidden{visibility:hidden}
+.tcard .btn.added{background:var(--green);box-shadow:none}
+.related{margin-top:48px}
+.related h3{font-size:20px;margin-bottom:16px}
+.rel-list{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.rel-list::-webkit-scrollbar{display:none}
+.rel{flex:none;display:flex;align-items:center;gap:12px;background:var(--card);border-radius:999px;padding:6px 20px 6px 6px;box-shadow:var(--shadow);font-weight:700;transition:transform .15s}
+.rel:hover{transform:translateY(-2px)}
+.rel i{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-family:var(--f-head);font-size:14px;color:#fff}
+.rel small{display:block;color:var(--muted);font-weight:600;font-size:12px}
+
+/* quiz banner */
+.duo{display:grid;grid-template-columns:1.3fr 1fr;gap:16px}
+.banner{border-radius:var(--r-lg);padding:40px;display:flex;flex-direction:column;gap:18px;position:relative;overflow:hidden;min-height:260px}
+.banner h2{font-size:clamp(24px,2.6vw,32px);margin:0;max-width:440px}
+.banner p{max-width:420px}
+.banner .btn{align-self:flex-start;margin-top:auto}
+.b-quiz{background:var(--accent);color:#fff}
+.b-quiz p{color:rgba(255,255,255,.85)}
+.b-quiz .deco{position:absolute;right:-20px;bottom:-30px;width:220px;opacity:.95}
+.b-help{background:var(--card);box-shadow:var(--shadow)}
+.b-help p{color:var(--muted)}
+.b-help .row{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:auto}
+.b-help .row .btn{margin-top:0}
+.b-help .tel{font-family:var(--f-head);font-weight:600;font-size:18px}
+
+/* reviews */
+.rev-top{display:grid;grid-template-columns:1.3fr repeat(3,1fr);gap:12px;margin-bottom:28px}
+.rev-grid{columns:3 300px;column-gap:16px}
+.rev{break-inside:avoid;margin-bottom:16px;background:var(--card);border-radius:var(--r-md);padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:14px}
+.rev-head{display:flex;gap:12px;align-items:center}
+.ava{width:48px;height:48px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:800;color:#fff;font-size:16px}
+.rev-head b{display:block;font-weight:800}
+.rev-head .chips{display:flex;gap:6px;margin-top:4px}
+.rev-head .chip{height:24px;font-size:12px;padding:0 9px}
+.rev p{font-size:15px;color:var(--ink-2)}
+.rev .more{font-size:14px;font-weight:700;color:var(--accent);align-self:flex-start}
+.rev.video{padding:0;overflow:hidden;color:#fff;position:relative;min-height:340px;justify-content:flex-end}
+.rev.video .vbg{position:absolute;inset:0}
+.rev.video .vbody{position:relative;padding:22px;background:linear-gradient(transparent,rgba(0,0,0,.6));display:flex;flex-direction:column;gap:8px}
+.rev.video .vplay{position:absolute;top:18px;left:18px;width:48px;height:48px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center}
+.rev.video .score{position:absolute;top:18px;right:18px;background:var(--ochre);color:var(--ink);border-radius:999px;padding:6px 12px;font-weight:800;font-size:14px}
+.rev.video small{opacity:.8;font-weight:600;font-size:13px}
+.rev-more{text-align:center;margin-top:16px}
+
+/* free */
+.free{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:var(--green);color:#fff;border-radius:var(--r-lg);padding:48px;position:relative;overflow:hidden}
+.free .lead{color:rgba(255,255,255,.8);font-size:17px}
+.free ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:20px;font-weight:600}
+.free li::before{content:"✦ ";color:var(--ochre)}
+.form{background:#fff;color:var(--ink);border-radius:var(--r-md);padding:28px;display:flex;flex-direction:column;gap:14px}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--bg-2);border-radius:999px;padding:4px}
+.seg button{height:42px;border-radius:999px;font-weight:700;font-size:15px;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--ink);box-shadow:var(--shadow)}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:13px;font-weight:700;color:var(--muted)}
+.field input{height:52px;border-radius:14px;border:1.5px solid var(--line);padding:0 16px;font-size:16px;background:var(--bg);transition:border-color .2s}
+.field input:focus{outline:none;border-color:var(--ink);background:#fff}
+.field input.err{border-color:var(--accent)}
+.form .hint{font-size:12px;color:var(--muted)}
+.form .ok{display:none;text-align:center;padding:20px 0}
+.form.done .ok{display:block}
+.form.done > :not(.ok){display:none}
+.ok .big{font-size:40px;margin-bottom:8px}
+
+/* faq */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+.faq-side{position:sticky;top:100px}
+.faq-side .ask{margin-top:28px;background:var(--card);border-radius:var(--r-md);padding:24px;box-shadow:var(--shadow)}
+.faq-side .ask b{display:block;font-family:var(--f-head);font-weight:600;font-size:18px;margin-bottom:6px}
+.faq-side .ask p{color:var(--muted);font-size:14.5px;margin-bottom:16px}
+.acc{display:flex;flex-direction:column;gap:10px}
+.acc details{background:var(--card);border-radius:var(--r-md);box-shadow:var(--shadow);overflow:hidden}
+.acc summary{list-style:none;cursor:pointer;padding:22px 64px 22px 24px;font-weight:800;font-size:17px;position:relative}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"";position:absolute;right:20px;top:50%;width:32px;height:32px;margin-top:-16px;border-radius:50%;background:var(--bg-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 10v12M10 16h12' stroke='%231D1A16' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/32px no-repeat;transition:transform .25s,background-color .2s}
+.acc details[open] summary::after{transform:rotate(45deg);background-color:var(--ochre)}
+.acc .body{padding:0 24px 24px;color:var(--ink-2);font-size:15.5px;display:flex;flex-direction:column;gap:12px}
+.acc .body ul{padding-left:20px;display:flex;flex-direction:column;gap:6px}
+
+/* footer */
+.footer{background:var(--ink);color:rgba(255,255,255,.7);padding:48px 0 32px;margin-top:40px;font-size:14px}
+.footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+.footer .logo{color:#fff;margin-bottom:14px}
+.footer .logo i{background:var(--ochre);color:var(--ink)}
+.footer a:hover{color:#fff}
+.footer h4{color:#fff;font-size:14px;margin-bottom:12px}
+.footer ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer .copy{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:13px}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(20,17,14,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.modal.open{display:flex}
+.modal-box{background:var(--bg);border-radius:var(--r-lg);width:100%;max-width:520px;max-height:calc(100dvh - 32px);overflow:auto;padding:36px;position:relative;animation:pop .25s ease}
+@keyframes pop{from{transform:translateY(12px);opacity:0}to{transform:none;opacity:1}}
+.modal-x{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;background:var(--bg-2);display:grid;place-items:center;font-size:20px}
+.modal h3{font-size:22px;margin-bottom:10px;padding-right:40px}
+.modal p{color:var(--muted)}
+.modal .form{background:transparent;padding:0;margin-top:20px}
+.fin-cards{display:flex;flex-direction:column;gap:12px;margin-top:20px}
+.fin-cards div{background:#fff;border-radius:var(--r-sm);padding:16px 18px}
+.fin-cards b{display:block;margin-bottom:4px}
+.fin-cards span{font-size:14px;color:var(--muted)}
+.q-progress{height:6px;background:var(--bg-2);border-radius:999px;margin:16px 0 24px;overflow:hidden}
+.q-progress i{display:block;height:100%;background:var(--accent);border-radius:999px;transition:width .3s}
+.q-opts{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.q-opt{text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;font-weight:700;transition:border-color .2s}
+.q-opt:hover{border-color:var(--ink)}
+.q-res{background:#fff;border-radius:var(--r-md);padding:22px;margin:18px 0}
+.q-res b{font-family:var(--f-head);font-size:20px;display:block;margin:6px 0}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--ink);color:#fff;padding:14px 22px;border-radius:999px;font-weight:700;font-size:15px;z-index:120;transition:transform .3s;display:flex;gap:10px;align-items:center;white-space:nowrap}
+.toast.show{transform:translate(-50%,0)}
+.mobile-menu{display:none}
+
+/* responsive */
+@media (max-width:1100px){
+  .nav{display:none}
+  .how-grid{grid-template-columns:repeat(2,1fr)}
+  .car-track{grid-auto-columns:calc((100% - 16px)/2)}
+  .feat-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  section{padding:56px 0}
+  .hero-grid,.teacher,.duo,.free,.faq{grid-template-columns:1fr}
+  .hero-media{min-height:440px}
+  .ratings,.rev-top{grid-template-columns:repeat(3,1fr)}
+  .ratings .rating-main,.rev-top .rating-main{grid-column:1/-1}
+  .faq-side{position:static}
+  .finance{grid-template-columns:1fr}
+  .finance .btn{justify-self:start}
+  .footer .wrap{grid-template-columns:1fr 1fr}
+  .footer .wrap>div:first-child{grid-column:1/-1}
+  .t-photo{max-width:380px}
+}
+@media (max-width:640px){
+  :root{--gutter:16px;--r-lg:22px}
+  body{font-size:15px}
+  section{padding:44px 0}
+  .header .wrap{height:64px;gap:12px}
+  .header-right .phone,.header-right .btn{display:none}
+  .burger{display:grid}
+  .mobile-menu.open{display:flex;flex-direction:column;gap:4px;position:fixed;top:64px;left:0;right:0;background:var(--bg);padding:12px 16px 20px;border-bottom:1px solid var(--line);z-index:49}
+  .mobile-menu a{padding:12px 4px;font-weight:700;border-bottom:1px solid var(--line)}
+  .mobile-menu .btn{margin-top:12px}
+  .hero{padding:16px 0 44px}
+  .hero-card{padding:24px 20px}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts .fact:last-child{grid-column:1/-1}
+  .timer{padding:14px}
+  .timer-digits div{min-width:46px}
+  .hero-cta .btn{width:100%}
+  .hero-media{min-height:400px}
+  .bubble-score{top:auto;bottom:90px;right:16px;max-width:160px;font-size:13px}
+  .ratings,.rev-top{grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .rating{padding:14px 12px}
+  .rating b{font-size:19px}
+  .rating span{font-size:12px}
+  .how-grid{grid-template-columns:1fr}
+  .how-card.wide{grid-column:auto}
+  .platform-mock{grid-template-columns:repeat(3,1fr)}
+  .platform-mock div:nth-child(n+7){display:none}
+  .features{padding:32px 20px;border-radius:0;margin:0 calc(var(--gutter)*-1)}
+  .feat-grid{grid-template-columns:1fr}
+  .feat{padding:22px}
+  .finance,.free,.banner{padding:28px 20px}
+  .finance .btn,.banner .btn{width:100%}
+  .t-facts{grid-template-columns:1fr 1fr}
+  .t-fact{padding:14px}
+  .t-fact b{font-size:21px}
+  .car-track{grid-auto-columns:86%}
+  .tcard{padding:22px}
+  .tariff-top{display:block}
+  .tabs{display:flex;width:100%}
+  .tab{flex:1;padding:0 12px;white-space:nowrap}
+  .car-nav{display:none}
+  .b-help .row .btn{width:100%}
+  .rev-grid{columns:1}
+  .footer .wrap{grid-template-columns:1fr}
+  .acc summary{font-size:15.5px;padding:18px 56px 18px 18px}
+  .acc .body{padding:0 18px 18px}
+  .modal-box{padding:28px 20px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="header" id="top">
+  <div class="wrap">
+    <a href="#top" class="logo"><i>С</i>СМИТАП</a>
+    <nav class="nav">
+      <a href="#how">Обучение</a>
+      <a href="#teacher">Преподаватель</a>
+      <a href="#tariffs">Тарифы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <div class="header-right">
+      <a class="phone" href="tel:+78006003198">+7 (800) 600-31-98</a>
+      <a class="btn btn-dark btn-sm" href="#tariffs">Выбрать тариф</a>
+      <button class="burger" aria-label="Меню" aria-expanded="false" id="burger">
+        <svg width="20" height="20" viewBox="0 0 20 20"><path d="M3 6h14M3 14h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#how">Обучение</a><a href="#teacher">Преподаватель</a><a href="#tariffs">Тарифы</a><a href="#reviews">Отзывы</a><a href="#faq">Вопросы</a>
+  <a class="btn btn-primary" href="tel:+78006003198">+7 (800) 600-31-98</a>
+</div>
+
+<main>
+<!-- 1. О КУРСЕ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-card">
+        <div class="hero-eyebrow">
+          <span class="chip chip-accent">ЕГЭ-2027</span><span class="chip">История</span><span class="chip">10–11 класс</span>
+        </div>
+        <h1>Подготовка к ЕГЭ по истории с <span>Элей&nbsp;Смит</span></h1>
+        <p class="hero-desc">Годовой онлайн-курс: живые вебинары, практика с проверкой по критериям ЕГЭ, личный наставник и регулярные пробники. Пройдём всю программу к маю и оставим время на повторение.</p>
+        <div class="facts">
+          <div class="fact"><small>Длительность</small><b>9 месяцев</b></div>
+          <div class="fact"><small>Старт</small><b>1 сентября</b></div>
+          <div class="fact"><small>Цена в месяц</small><b>от 4 290 ₽</b></div>
+        </div>
+        <div class="timer" id="timer" data-deadline="2026-11-30T23:59:59+03:00">
+          <p>Цены вырастут через — успей зафиксировать <b>текущую стоимость</b></p>
+          <div class="timer-digits">
+            <div><b data-t="d">00</b><small>дн</small></div>
+            <div><b data-t="h">00</b><small>ч</small></div>
+            <div><b data-t="m">00</b><small>мин</small></div>
+            <div><b data-t="s">00</b><small>сек</small></div>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#tariffs">Выбрать тариф</a>
+          <button class="btn btn-ghost" data-open="free">Попробовать бесплатно</button>
+        </div>
+      </div>
+
+      <div class="hero-media" aria-label="Видео-приветствие преподавателя">
+        <svg class="pattern" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><pattern id="p" width="80" height="80" patternUnits="userSpaceOnUse">
+            <path d="M10 70V30l20-15 20 15v40M14 70V34M22 70V34M38 70V34M46 70V34M8 30h44" fill="none" stroke="#fff" stroke-width="1.5"/>
+          </pattern></defs><rect width="400" height="400" fill="url(#p)"/>
+        </svg>
+        <svg class="portrait" viewBox="0 0 400 440" aria-hidden="true">
+          <path d="M40 440c0-92 72-150 160-150s160 58 160 150z" fill="#D9532B"/>
+          <path d="M150 300h100l-10 40h-80z" fill="#F2C9A8"/>
+          <path d="M108 170c0-70 40-118 92-118s92 48 92 118c0 30-6 60-6 96-24 20-56 30-86 30s-62-10-86-30c0-36-6-66-6-96z" fill="#2A1B14"/>
+          <ellipse cx="200" cy="188" rx="64" ry="78" fill="#F4D3B6"/>
+          <path d="M134 160c10-52 44-76 70-76 36 0 60 30 64 70-34-6-66-22-82-44-10 26-30 42-52 50z" fill="#2A1B14"/>
+          <circle cx="176" cy="196" r="5" fill="#2A1B14"/><circle cx="224" cy="196" r="5" fill="#2A1B14"/>
+          <path d="M184 232q16 12 32 0" stroke="#B5482A" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div class="bubble bubble-name">Эля Смит<small>преподаватель истории</small></div>
+        <div class="bubble bubble-score">Сдала ЕГЭ по истории на 100 баллов — и научу тебя</div>
+        <span class="ph-label">Здесь фото / видео преподавателя</span>
+        <button class="play" data-toast="Видео-приветствие появится после загрузки"><i><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 1.5v11l9-5.5z" fill="#fff"/></svg></i>Смотреть 1:20</button>
+      </div>
+    </div>
+
+    <div class="ratings">
+      <div class="rating rating-main"><b>120 000+</b><span>выпускников подготовили к экзаменам</span></div>
+      <div class="rating"><span class="stars">★★★★★</span><b>5<small>/5</small></b><span>Яндекс</span></div>
+      <div class="rating"><span class="stars">★★★★★</span><b>4.9<small>/5</small></b><span>Отзовик</span></div>
+      <div class="rating"><span class="stars">★★★★★</span><b>4.9<small>/5</small></b><span>Т-Банк</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. КАК ПРОХОДИТ ОБУЧЕНИЕ -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Как проходит <span class="mark">обучение</span></h2>
+      <p class="lead">Всё, что нужно для высокого балла, — в одном курсе. Ничего докупать не придётся.</p>
+    </div>
+    <div class="how-grid">
+      <article class="how-card"><div class="ico" style="background:var(--accent-soft)">🎓</div><h3>Уроки с опытным преподавателем</h3><p>На вебинарах разбираем всю необходимую теорию и закрепляем её на практике. Записи доступны в любое время.</p></article>
+      <article class="how-card"><div class="ico" style="background:var(--green-soft)">✍️</div><h3>Практика с обратной связью по критериям ЕГЭ</h3><p>Задания первой и второй части по каждой теме. Проверим по критериям экзамена и дадим подробную обратную связь.</p></article>
+      <article class="how-card wide">
+        <div class="ico" style="background:rgba(255,255,255,.1)">💻</div>
+        <h3>Образовательная платформа</h3>
+        <p>Уроки, домашки, банк заданий, календарь и напоминания — всё в одном месте, без путаницы с вкладками и ссылками.</p>
+        <div class="platform-mock" aria-hidden="true">
+          <div class="a">Пн<br>Вебинар</div><div>Вт</div><div class="o">Ср<br>ДЗ</div><div>Чт</div><div class="g">Пт<br>Зачёт</div>
+          <div>Сб</div><div class="o">Вс<br>Квиз</div><div>Пн</div><div class="a">Вт<br>Вебинар</div><div>Ср</div>
+        </div>
+      </article>
+      <article class="how-card"><div class="ico" style="background:var(--ochre-soft)">📒</div><h3>Скрипты и материалы</h3><p>К каждому уроку — рабочая тетрадь: заполняешь пропуски и получаешь конспект со всем, что нужно для ЕГЭ.</p></article>
+      <article class="how-card"><div class="ico" style="background:var(--accent-soft)">❤️</div><h3>Достижения и система жизней</h3><p>Жизни мотивируют соблюдать дедлайны, а за регулярную учёбу — уровни и достижения. Срок можно перенести с наставником.</p></article>
+      <article class="how-card"><div class="ico" style="background:var(--green-soft)">🤝</div><h3>Поддержка и дружное комьюнити</h3><p>Ты не один: группа единомышленников, с которыми можно обсудить учёбу, поделиться переживаниями и найти друзей.</p></article>
+      <article class="how-card"><div class="ico" style="background:var(--ochre-soft)">🗂️</div><h3>Большая база доп. материалов</h3><p>Карточки Quizlet, методички по сложным темам, запоминалки и подборки заданий — всё уже включено.</p></article>
+      <article class="how-card" style="grid-column:1/-1;flex-direction:row;align-items:center;gap:20px;flex-wrap:wrap"><div class="ico" style="background:var(--accent-soft);flex:none">🔁</div><div style="flex:1;min-width:240px"><h3>Системное повторение и регулярные пробники</h3><p>Закрепляем пройденное на вебинарах, отслеживаем прогресс, а перед экзаменом повторяем всю программу на Финальном курсе.</p></div></article>
+    </div>
+    <div class="how-foot">
+      <p>Хочешь посмотреть программу по месяцам?</p>
+      <div class="row">
+        <a class="link-arrow" href="#" target="_blank" rel="noopener" data-toast="Здесь будет ссылка на программу в Google Диске">Программа курса →</a>
+        <a class="btn btn-primary btn-sm" href="#tariffs">Выбрать тариф</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. ФИШКИ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="features">
+      <h2>Что делает наш курс по истории <span style="color:var(--ochre)">особенным</span></h2>
+      <p class="lead">Ответили заранее на то, о чём чаще всего спрашивают ученики и родители.</p>
+      <div class="feat-grid">
+        <div class="feat"><span class="n">01</span><h3>Системное повторение</h3><p>Каждый исторический период повторяется в вебинарах, тестах-повторениях и зачётах, чтобы материал не забывался.</p></div>
+        <div class="feat"><span class="n">02</span><h3>Культура, карты и всемирная история</h3><p>Изучаем постепенно в течение года, а не оставляем на последний момент.</p></div>
+        <div class="feat"><span class="n">03</span><h3>Много практики в формате ЕГЭ</h3><p>Домашние задания, практические вебинары и авторские задания по картам на основе реального экзамена.</p></div>
+        <div class="feat"><span class="n">04</span><h3>Интерактивные вебинары</h3><p>Исторические фильмы, мемы и визуализации для лучшего понимания темы.</p></div>
+        <div class="feat"><span class="n">05</span><h3>Программа заканчивается заранее</h3><p>Последняя тема — в начале мая. Остаётся 3–4 недели на повторение перед экзаменом.</p></div>
+        <div class="feat"><span class="n">06</span><h3>Ответы по теории за 5 минут</h3><p>Поможем разобраться с любым вопросом в течение нескольких минут.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ФИНАНСОВЫЕ ВЫГОДЫ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="finance">
+      <svg class="coin" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="#1D1A16" stroke-width="6"/><text x="50" y="66" text-anchor="middle" font-size="46" font-weight="700" fill="#1D1A16">₽</text></svg>
+      <div>
+        <h2>Подготовка будет ещё выгоднее</h2>
+        <p>Оформите налоговый вычет или оплатите обучение материнским капиталом.</p>
+        <div class="fin-list"><span>Налоговый вычет 13%</span><span>Маткапитал</span><span>Рассрочка 0%</span></div>
+      </div>
+      <button class="btn btn-dark" data-open="finance">Узнать как</button>
+    </div>
+  </div>
+</section>
+
+<!-- 5. ПРЕПОДАВАТЕЛЬ -->
+<section id="teacher">
+  <div class="wrap">
+    <div class="teacher">
+      <div class="t-photo">
+        <svg class="portrait" viewBox="0 0 400 440" aria-hidden="true">
+          <path d="M40 440c0-92 72-150 160-150s160 58 160 150z" fill="#22304A"/>
+          <path d="M150 300h100l-10 40h-80z" fill="#F2C9A8"/>
+          <path d="M108 170c0-70 40-118 92-118s92 48 92 118c0 30-6 60-6 96-24 20-56 30-86 30s-62-10-86-30c0-36-6-66-6-96z" fill="#2A1B14"/>
+          <ellipse cx="200" cy="188" rx="64" ry="78" fill="#F4D3B6"/>
+          <path d="M134 160c10-52 44-76 70-76 36 0 60 30 64 70-34-6-66-22-82-44-10 26-30 42-52 50z" fill="#2A1B14"/>
+          <circle cx="176" cy="196" r="5" fill="#2A1B14"/><circle cx="224" cy="196" r="5" fill="#2A1B14"/>
+          <path d="M180 230q20 18 40 0" stroke="#B5482A" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="badge">100 баллов 🎯</span>
+      </div>
+      <div>
+        <p class="t-sub" style="margin-bottom:6px">Преподаватель курса</p>
+        <div class="t-head"><h2 class="t-name" style="margin:0">Эля Смит</h2><span class="chip chip-green">история</span></div>
+        <p class="t-sub">10-й год в онлайн-образовании</p>
+        <div class="t-socials">
+          <a href="#" aria-label="ВКонтакте">VK</a><a href="#" aria-label="Telegram">TG</a><a href="#" aria-label="YouTube">YT</a><a href="#" aria-label="TikTok">TT</a>
+        </div>
+        <div class="t-facts">
+          <div class="t-fact hl"><b>100</b><span>баллов на ЕГЭ по истории</span></div>
+          <div class="t-fact"><b>603</b><span>стобалльника</span></div>
+          <div class="t-fact" style="grid-column:1/-1"><b>Каждый 3-й</b><span>наш выпускник сдал ЕГЭ по истории на 80+ баллов</span></div>
+        </div>
+        <ul class="t-edu">
+          <li>Окончила истфак СПбГУ с красным дипломом</li>
+          <li>Магистратура ВШЭ</li>
+          <li>Диплом о дополнительном образовании «Искусствоведение»</li>
+        </ul>
+        <a class="btn btn-ghost" href="#reviews">Отзывы учеников</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. ТАРИФЫ -->
+<section id="tariffs">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:24px">
+      <h2>Выберите подходящий <span class="mark">формат</span></h2>
+      <p class="lead">Годовой курс подготовки к ЕГЭ по истории. Оплата помесячно.</p>
+    </div>
+    <div class="tariff-top">
+      <div class="tabs" role="tablist" id="gradeTabs">
+        <button class="tab" role="tab" aria-selected="true" data-grade="11">11 класс</button>
+        <button class="tab" role="tab" aria-selected="false" data-grade="10">10 класс</button>
+      </div>
+      <div class="car-nav" style="margin-bottom:28px"><button id="carPrev" aria-label="Назад">←</button><button id="carNext" aria-label="Вперёд">→</button></div>
+    </div>
+    <!-- Контейнер заполняется данными с платформы (см. TARIFFS / loadTariffs в скрипте) -->
+    <div class="car"><div class="car-track" id="tariffTrack" aria-live="polite"></div></div>
+
+    <div class="related">
+      <h3>С этим предметом выпускники часто выбирают</h3>
+      <div class="rel-list">
+        <a class="rel" href="#"><i style="background:#3D6FD9">Р</i><span>Русский язык<small>ЕГЭ · 11 класс</small></span></a>
+        <a class="rel" href="#"><i style="background:#2F6B4F">М</i><span>Математика<small>ЕГЭ · профиль</small></span></a>
+        <a class="rel" href="#"><i style="background:#D9532B">О</i><span>Обществознание<small>ЕГЭ · 11 класс</small></span></a>
+        <a class="rel" href="#"><i style="background:#8E4FC7">А</i><span>Английский<small>ЕГЭ · 11 класс</small></span></a>
+        <a class="rel" href="#"><i style="background:#C99A1E">Л</i><span>Литература<small>ЕГЭ · 11 класс</small></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. ТЕСТ + ВОПРОС -->
+<section style="padding-top:0">
+  <div class="wrap duo">
+    <div class="banner b-quiz">
+      <svg class="deco" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="90" fill="#F2C14E"/><path d="M70 105l22 22 40-50" stroke="#1D1A16" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h2>Подберите идеальный тариф за 1 минуту</h2>
+      <p>Ответь на 3 вопроса — и мы подскажем формат под твою цель и нагрузку.</p>
+      <button class="btn btn-light" data-open="quiz">Пройти тест</button>
+    </div>
+    <div class="banner b-help">
+      <h2>Остались вопросы? Поможем с выбором!</h2>
+      <p>Расскажем про программу, тарифы и способы оплаты.</p>
+      <div class="row">
+        <button class="btn btn-dark" data-open="ask">Задать вопрос</button>
+        <a class="tel" href="tel:+78006003198">+7 (800) 600-31-98</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. ОТЗЫВЫ -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:24px"><h2>Слово нашим <span class="mark">ученикам</span></h2></div>
+    <div class="rev-top">
+      <div class="rating rating-main"><b>120 000+</b><span>учеников доверили нам свою подготовку</span></div>
+      <div class="rating"><span class="stars">★★★★★</span><b>5<small>/5</small></b><span>Яндекс</span></div>
+      <div class="rating"><span class="stars">★★★★★</span><b>4.9<small>/5</small></b><span>Отзовик</span></div>
+      <div class="rating"><span class="stars">★★★★★</span><b>4.9<small>/5</small></b><span>Т-Банк</span></div>
+    </div>
+    <div class="rev-grid" id="revGrid"></div>
+    <div class="rev-more"><a class="btn btn-ghost" href="#" data-toast="Здесь будет страница со всеми отзывами">Посмотреть все отзывы</a></div>
+  </div>
+</section>
+
+<!-- 9. БЕСПЛАТНЫЕ МАТЕРИАЛЫ -->
+<section id="free" style="padding-top:0">
+  <div class="wrap">
+    <div class="free">
+      <div>
+        <h2>Забирай материалы <span style="color:var(--ochre)">для старта</span></h2>
+        <p class="lead">Бесплатный мини-курс по истории придёт на почту — попробуй формат до покупки.</p>
+        <ul id="freeList"></ul>
+      </div>
+      <form class="form" id="freeForm" novalidate>
+        <div class="seg" role="group" aria-label="Кто вы">
+          <button type="button" aria-pressed="true" data-who="student">Я ученик</button>
+          <button type="button" aria-pressed="false" data-who="parent">Я родитель</button>
+        </div>
+        <div class="field"><label for="fName">Имя</label><input id="fName" name="name" autocomplete="given-name" placeholder="Как к тебе обращаться"></div>
+        <div class="field"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email" autocomplete="email" placeholder="name@mail.ru" required></div>
+        <button class="btn btn-primary" type="submit">Попробовать бесплатно</button>
+        <p class="hint">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+        <div class="ok"><div class="big">📬</div><b>Готово! Проверь почту</b><p class="hint" style="margin-top:6px">Письмо с материалами придёт в течение пары минут.</p></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 10. FAQ -->
+<section id="faq">
+  <div class="wrap faq">
+    <div class="faq-side">
+      <h2>Ответы на частые <span class="mark">вопросы</span></h2>
+      <div class="ask">
+        <b>Остались вопросы?</b>
+        <p>Напишите нам — ответим и поможем выбрать тариф.</p>
+        <button class="btn btn-dark btn-sm" data-open="ask">Задать вопрос</button>
+      </div>
+    </div>
+    <div class="acc">
+      <details open>
+        <summary>Всё, что нужно знать о ЕГЭ по истории</summary>
+        <div class="body">
+          <p>Это один из самых сложных экзаменов, поэтому курсы подготовки к ЕГЭ по истории помогают выстроить системный подход к обучению.</p>
+          <p>Экзамен состоит из 21 задания: 12 заданий первой части и 9 заданий второй части. Максимальный первичный балл — 42: 20 баллов можно набрать за первую часть и 22 — за вторую. На выполнение работы отводится 3 часа 30 минут — 210 минут, в течение которых важно правильно распределить время между заданиями разного уровня сложности.</p>
+          <p>По статистике средний результат выпускников в 2024 году составил 57,19 балла. Основные причины — высокая сложность экзамена и недостаточная глубина подготовки. Учениками чаще всего допускаются ошибки в хронологии, культуре, анализе причинно-следственных связей и интерпретации исторических событий.</p>
+          <p>Особенно трудными оказываются задания по зарубежной истории, где требуется не просто знание фактов, а умение анализировать процессы. Именно поэтому качественный курс подготовки делает акцент на понимании логики истории, а не на механическом заучивании дат.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Что учить для ЕГЭ по истории: разделы и темы?</summary>
+        <div class="body">
+          <p>Объём материала по истории действительно большой: он включает отечественную и всеобщую историю, культуру, работу с картами и датами. Чтобы успешно сдать экзамен и получить высокий балл, важно проработать все темы без пропусков, особенно если вы начинаете изучать историю с нуля.</p>
+          <p>На курсе программа выстроена на основе актуального кодификатора ФИПИ и охватывает все необходимые разделы, а структура курса позволяет равномерно распределить нагрузку на протяжении всего обучения.</p>
+          <p>В рамках обучения изучаются:</p>
+          <ul>
+            <li>История России: с древнейших времён до 1914 г.; период 1914–1945 гг., включая Великую Отечественную войну; современный этап 1992–2022 гг.</li>
+            <li>История СССР в 1945–1991 гг.</li>
+            <li>Всеобщая история с древнейших времён по 2022 г.</li>
+          </ul>
+          <p>Такой объём невозможно качественно освоить без чёткого плана. Поэтому темы распределены по месяцам обучения, а теория изучается последовательно: от базовых понятий к более сложным темам.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Как мы готовим к ЕГЭ по истории?</summary>
+        <div class="body">
+          <p>Подготовка строится так, чтобы ученик не только запоминал факты, но и понимал материал и умел применять знания на практике. Каждое занятие сопровождается авторским скриптом — это структурированный конспект урока, который помогает лучше усваивать теорию. Скрипты создаются на основе более чем десяти учебников и полностью соответствуют требованиям экзамена.</p>
+          <p>Формат обучения включает интерактивные вебинары, где сухая теория заменяется живым разбором исторических периодов, видеофрагментами и дополнительными фактами. При этом наполнение курса регулярно обновляется с учётом изменений в заданиях и критериях проверки. Важную роль играет практика: ученики систематически работают с заданиями формата ЕГЭ и закрепляют материал с помощью домашних заданий.</p>
+          <p>В процессе подготовки используются:</p>
+          <ul>
+            <li>практические задания для закрепления тем;</li>
+            <li>дополнительные материалы для проработки сложных разделов;</li>
+            <li>разборы заданий второй части;</li>
+            <li>подборки вспомогательных источников для повторения.</li>
+          </ul>
+          <p>Такой подход делает подготовку устойчивой и позволяет ученикам постепенно повышать свой результат.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Познакомьтесь с нашим преподавателем истории</summary>
+        <div class="body">
+          <p>Преподаватель истории в онлайн-школе СМИТАП — Эля Смит. Она сама прошла путь выпускника и сдала экзамены на высокие баллы: русский язык — 98, обществознание — 92, история — 100, суммарно 290 баллов. Преподаватель окончила исторический факультет СПбГУ в 2021 году с красным дипломом и 9-й год в онлайн-образовании.</p>
+          <p>Также она получила диплом о дополнительном образовании по программе «Искусствоведение» и прошла обучение на эксперта ЕГЭ по истории.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Онлайн-подготовка к ЕГЭ по истории: почему это работает?</summary>
+        <div class="body">
+          <p>Онлайн-формат делает подготовку удобной и эффективной. Все материалы включены в курс — учебники, контурные карты, квизлеты и дополнительные пособия, поэтому ученикам не нужно ничего докупать. При этом структура курса выстроена так, чтобы ученик не терялся в большом объёме информации и мог сосредоточиться на ключевых темах. Обучение проходит на удобной платформе, где собраны записи вебинаров, материалы и задания.</p>
+          <p>Каждого ученика сопровождает наставник, который проверяет работы, анализирует ошибки и даёт подробную обратную связь. Программа обучения предусматривает регулярное повторение: квизы по темам, обобщающие вебинары и зачёты.</p>
+          <p>Такой формат особенно эффективен для тех, кто ранее не изучал историю и начинает подготовку с базового уровня. В результате ученики уверенно подходят к экзамену, стабильно повышают балл и достигают нужного результата.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div><a href="#top" class="logo"><i>С</i>СМИТАП</a><p>Онлайн-школа подготовки к ЕГЭ и ОГЭ</p></div>
+    <div><h4>Курс</h4><ul><li><a href="#how">Как проходит обучение</a></li><li><a href="#tariffs">Тарифы</a></li><li><a href="#reviews">Отзывы</a></li><li><a href="#faq">Частые вопросы</a></li></ul></div>
+    <div><h4>Контакты</h4><ul><li><a href="tel:+78006003198">+7 (800) 600-31-98</a></li><li><a href="#" data-open="ask">Задать вопрос</a></li></ul></div>
+    <p class="copy">© 2026 СМИТАП. Все права защищены.</p>
+  </div>
+</footer>
+
+<!-- MODALS -->
+<div class="modal" id="m-ask" role="dialog" aria-modal="true" aria-labelledby="askTitle">
+  <div class="modal-box">
+    <button class="modal-x" data-close aria-label="Закрыть">×</button>
+    <h3 id="askTitle">Задайте вопрос</h3>
+    <p>Перезвоним или напишем в течение 15 минут в рабочее время.</p>
+    <form class="form" novalidate data-simple>
+      <div class="field"><label>Имя</label><input name="name" autocomplete="given-name" placeholder="Ваше имя"></div>
+      <div class="field"><label>Телефон</label><input name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required></div>
+      <div class="field"><label>Вопрос</label><input name="q" placeholder="Например, какой тариф выбрать"></div>
+      <button class="btn btn-primary" type="submit">Отправить</button>
+      <div class="ok"><div class="big">✅</div><b>Заявка принята</b><p class="hint" style="margin-top:6px">Скоро свяжемся с вами.</p></div>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="m-finance" role="dialog" aria-modal="true" aria-labelledby="finTitle">
+  <div class="modal-box">
+    <button class="modal-x" data-close aria-label="Закрыть">×</button>
+    <h3 id="finTitle">Как сэкономить на обучении</h3>
+    <p>Школа имеет образовательную лицензию, поэтому все способы ниже доступны официально.</p>
+    <div class="fin-cards">
+      <div><b>Налоговый вычет 13%</b><span>Верните часть стоимости курса через налоговую. Пришлём договор, лицензию и справку об оплате.</span></div>
+      <div><b>Материнский капитал</b><span>Оплатите обучение средствами маткапитала — поможем подготовить документы для Социального фонда.</span></div>
+      <div><b>Помесячная оплата и рассрочка</b><span>Платите помесячно без переплат и не вносите всю сумму сразу.</span></div>
+    </div>
+    <button class="btn btn-dark" style="width:100%;margin-top:20px" data-open="ask">Получить консультацию</button>
+  </div>
+</div>
+
+<div class="modal" id="m-quiz" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+  <div class="modal-box">
+    <button class="modal-x" data-close aria-label="Закрыть">×</button>
+    <h3 id="quizTitle">Подбор тарифа</h3>
+    <div class="q-progress"><i id="qBar" style="width:0"></i></div>
+    <div id="qBody"></div>
+  </div>
+</div>
+
+<div class="modal" id="m-free" role="dialog" aria-modal="true" aria-labelledby="freeTitle">
+  <div class="modal-box">
+    <button class="modal-x" data-close aria-label="Закрыть">×</button>
+    <h3 id="freeTitle">Бесплатный мини-курс</h3>
+    <p>Оставь email — пришлём первые уроки и материалы для старта.</p>
+    <form class="form" novalidate data-simple>
+      <div class="field"><label>Email</label><input name="email" type="email" autocomplete="email" placeholder="name@mail.ru" required></div>
+      <button class="btn btn-primary" type="submit">Получить материалы</button>
+      <div class="ok"><div class="big">📬</div><b>Готово! Проверь почту</b></div>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ===== Данные тарифов.
+   В бою заменяются ответом API платформы (магазина): loadTariffs() → fetch('/api/shop/courses?subject=history')
+   Структура карточки совпадает с карточкой магазина на платформе. ===== */
+const TARIFFS = {
+  "11": [
+    { id:"h11-std", title:"Годовой курс стандарт", note:"", tags:["11 класс","ЕГЭ-2027"], price:4290,
+      features:["30 единомышленников в группе","10–15 занятий в месяц","20–24 практических задания в месяц","Удобные конспекты занятий","Личный наставник","Ответы на вопросы по теории за 5 минут","Регулярные пробники и зачёты","Игровой формат обучения"], extras:[] },
+    { id:"h11-plus", title:"Годовой курс плюс", note:"Идеально для цели 90+", tags:["11 класс","ЕГЭ-2027"], price:5590, featured:true,
+      features:["15 единомышленников в группе","10–15 занятий в месяц","20–24 практических задания в месяц","Удобные конспекты занятий","Личный наставник","Ответы на вопросы по теории за 5 минут","Регулярные пробники и зачёты","Игровой формат обучения"],
+      extras:["Индивидуальные домашние задания","Еженедельные созвоны с наставником"] }
+  ],
+  "10": [
+    { id:"h10", title:"Годовой курс 10 класс", note:"", tags:["10 класс","Старт заранее"], price:3790,
+      features:["30 единомышленников в группе","9–12 занятий в месяц","12–15 практических заданий в месяц","Удобные конспекты занятий","Личный наставник","Ответы на вопросы по теории за 5 минут","Регулярные пробники и зачёты","Игровой формат обучения"], extras:[] }
+  ]
+};
+async function loadTariffs(){ return TARIFFS; } // TODO: подключить API платформы
+
+const REVIEWS = [
+  {type:"video", name:"Алина К.", score:98, exam:"ЕГЭ", bg:"linear-gradient(160deg,#D9532B,#8C2E14)", text:"Реакция на баллы 2026"},
+  {type:"text", name:"Матвей Л.", score:94, exam:"ЕГЭ", color:"#2F6B4F", text:"Боялся культуры больше всего, а в итоге за неё ни одного минуса. Эля объясняет так, что картины и соборы запоминаются сами собой. Скрипты — топ, пользовался ими до самого экзамена."},
+  {type:"text", name:"Софья Р.", score:100, exam:"ЕГЭ", color:"#3D6FD9", text:"Пришла с 40 баллами на пробнике в сентябре. Наставник проверял каждое сочинение по критериям, и к маю я перестала бояться второй части. 100 — до сих пор не верю!"},
+  {type:"text", name:"Ирина, мама Дани", score:87, exam:"ЕГЭ", color:"#8E4FC7", text:"Как родитель ценю, что видно прогресс и дедлайны: система жизней реально дисциплинирует. Оформили налоговый вычет — школа прислала все документы."},
+  {type:"video", name:"Никита С.", score:91, exam:"ЕГЭ", bg:"linear-gradient(160deg,#22304A,#3D5A8C)", text:"Реакция на баллы 2026"},
+  {type:"text", name:"Даша В.", score:96, exam:"ЕГЭ", color:"#C99A1E", text:"Вебинары с фильмами и мемами — лучшее, что было в 11 классе. Программа закончилась в начале мая, и весь май мы спокойно повторяли."},
+  {type:"video", name:"Полина Ж.", score:100, exam:"ЕГЭ", bg:"linear-gradient(160deg,#2F6B4F,#174230)", text:"Реакция на баллы 2026"},
+  {type:"text", name:"Артём Н.", score:89, exam:"ЕГЭ", color:"#D9532B", text:"Карты были моей болью. Авторские задания по картам на основе реального экзамена закрыли этот вопрос полностью."}
+];
+
+const FREE = {
+  student:["3 урока по самым «пугающим» темам","Чек-лист: как устроен ЕГЭ по истории","Карточки Quizlet по датам"],
+  parent:["Как выбрать курс подготовки: памятка","План подготовки на год по месяцам","Как вернуть 13% через налоговый вычет"]
+};
+
+const $ = (s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const fmt = n => n.toLocaleString('ru-RU').replace(/ /g,' ');
+
+/* toast */
+let tTimer; function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(tTimer); tTimer=setTimeout(()=>t.classList.remove('show'),2600); }
+$$('[data-toast]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();toast(el.dataset.toast)}));
+
+/* header */
+addEventListener('scroll',()=>$('.header').classList.toggle('scrolled',scrollY>8),{passive:true});
+const burger=$('#burger'), mm=$('#mobileMenu');
+burger.addEventListener('click',()=>{const o=mm.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+$$('a',mm).forEach(a=>a.addEventListener('click',()=>{mm.classList.remove('open');burger.setAttribute('aria-expanded',false)}));
+
+/* timer */
+(function(){
+  const el=$('#timer'), end=new Date(el.dataset.deadline).getTime();
+  const pad=n=>String(n).padStart(2,'0');
+  function tick(){
+    const left=end-Date.now();
+    if(left<=0){ el.style.display='none'; return; }
+    const s=Math.floor(left/1000);
+    $('[data-t=d]',el).textContent=pad(Math.floor(s/86400));
+    $('[data-t=h]',el).textContent=pad(Math.floor(s%86400/3600));
+    $('[data-t=m]',el).textContent=pad(Math.floor(s%3600/60));
+    $('[data-t=s]',el).textContent=pad(s%60);
+  }
+  tick(); setInterval(tick,1000);
+})();
+
+/* tariffs */
+let tariffData={}, grade="11";
+const track=$('#tariffTrack');
+function renderTariffs(){
+  track.innerHTML=(tariffData[grade]||[]).map(t=>`
+    <article class="tcard${t.featured?' featured':''}" id="${t.id}">
+      <div class="chips">${t.tags.map((x,i)=>`<span class="chip ${i?'chip-outline':'chip-ochre'}">${x}</span>`).join('')}${t.featured?'<span class="chip chip-accent">Хит</span>':''}</div>
+      <h3>${t.title}</h3>
+      <p class="note">${t.note?'('+t.note+')':''}</p>
+      <ul>${t.features.map(f=>`<li>${f}</li>`).join('')}
+        ${t.extras.length?`<li class="plus-sep">+ дополнительно</li>`+t.extras.map(f=>`<li class="plus">${f}</li>`).join(''):''}</ul>
+      <div class="price"><b>${fmt(t.price)} ₽</b><span>/ мес</span></div>
+      <button class="btn ${t.featured?'btn-primary':'btn-dark'}" data-cart="${t.id}">Добавить в корзину</button>
+    </article>`).join('') + `
+    <article class="tcard tcard-promo">
+      <span class="chip chip-ochre" style="align-self:flex-start">1 минута</span>
+      <h3>Не знаешь, что выбрать?</h3>
+      <p>Ответь на 3 вопроса — подскажем тариф под твою цель, класс и нужный уровень поддержки.</p>
+      <button class="btn btn-light" data-open="quiz">Пройти тест</button>
+      <button class="btn" style="color:#fff;border:1.5px solid rgba(255,255,255,.4)" data-open="ask">Задать вопрос</button>
+    </article>`;
+  updateNav();
+}
+track.addEventListener('click',e=>{
+  const b=e.target.closest('[data-cart]'); if(!b) return;
+  b.classList.add('added'); b.textContent='✓ В корзине'; toast('Тариф добавлен в корзину');
+});
+$('#gradeTabs').addEventListener('click',e=>{
+  const b=e.target.closest('[data-grade]'); if(!b) return;
+  grade=b.dataset.grade; $$('#gradeTabs .tab').forEach(x=>x.setAttribute('aria-selected',x===b)); track.scrollLeft=0; renderTariffs();
+});
+function step(){ const c=track.querySelector('.tcard'); return c? c.offsetWidth+16 : 300; }
+$('#carPrev').onclick=()=>track.scrollBy({left:-step(),behavior:'smooth'});
+$('#carNext').onclick=()=>track.scrollBy({left:step(),behavior:'smooth'});
+function updateNav(){
+  const max=track.scrollWidth-track.clientWidth-2;
+  $('#carPrev').disabled=track.scrollLeft<=2; $('#carNext').disabled=track.scrollLeft>=max;
+  $('.car-nav').classList.toggle('hidden', max<=0);
+}
+track.addEventListener('scroll',updateNav,{passive:true}); addEventListener('resize',updateNav);
+loadTariffs().then(d=>{tariffData=d;renderTariffs()});
+
+/* reviews */
+$('#revGrid').innerHTML=REVIEWS.map(r=>{
+  const ini=r.name.split(' ').map(w=>w[0]).join('').slice(0,2);
+  if(r.type==='video') return `<article class="rev video"><div class="vbg" style="background:${r.bg}"></div>
+    <button class="vplay" aria-label="Смотреть видео" data-toast="Видео-отзыв появится после загрузки"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg></button>
+    <span class="score">${r.score} баллов</span>
+    <div class="vbody"><b>${r.name}</b><small>${r.text} · ${r.exam} · история</small></div></article>`;
+  return `<article class="rev"><div class="rev-head"><div class="ava" style="background:${r.color}">${ini}</div>
+    <div><b>${r.name}</b><div class="chips"><span class="chip chip-ochre">${r.score} баллов</span><span class="chip chip-outline">${r.exam}</span></div></div></div>
+    <p>${r.text}</p></article>`;
+}).join('');
+$$('#revGrid [data-toast]').forEach(el=>el.addEventListener('click',()=>toast(el.dataset.toast)));
+
+/* free form segmentation */
+function renderFree(who){ $('#freeList').innerHTML=FREE[who].map(x=>`<li>${x}</li>`).join(''); }
+renderFree('student');
+$$('.seg button').forEach(b=>b.addEventListener('click',()=>{
+  $$('.seg button').forEach(x=>x.setAttribute('aria-pressed',x===b)); renderFree(b.dataset.who);
+  $('#fName').placeholder = b.dataset.who==='parent' ? 'Как к вам обращаться' : 'Как к тебе обращаться';
+}));
+
+/* forms */
+function validate(form){
+  let ok=true;
+  $$('input[required]',form).forEach(i=>{
+    const v=i.value.trim();
+    const good = i.type==='email' ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) : i.type==='tel' ? v.replace(/\D/g,'').length>=10 : !!v;
+    i.classList.toggle('err',!good); if(!good) ok=false;
+  });
+  return ok;
+}
+$$('form.form').forEach(f=>f.addEventListener('submit',e=>{
+  e.preventDefault(); if(!validate(f)) { toast('Проверьте заполнение полей'); return; }
+  f.classList.add('done'); // TODO: отправка в CRM / рассылку
+}));
+
+/* modals */
+function openModal(id){ $$('.modal.open').forEach(m=>m.classList.remove('open')); const m=$('#m-'+id); if(!m) return; m.classList.add('open'); document.body.style.overflow='hidden'; if(id==='quiz') startQuiz(); }
+function closeModal(){ $$('.modal.open').forEach(m=>{m.classList.remove('open'); $$('form.done',m).forEach(f=>{f.classList.remove('done');f.reset()})}); document.body.style.overflow=''; }
+document.addEventListener('click',e=>{
+  const o=e.target.closest('[data-open]'); if(o){ e.preventDefault(); openModal(o.dataset.open); return; }
+  if(e.target.closest('[data-close]') || e.target.classList.contains('modal')) closeModal();
+});
+addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
+
+/* quiz */
+const QUIZ=[
+  {q:"В каком ты классе?", a:[["11 класс — сдаю в этом году","11"],["10 класс — хочу начать заранее","10"]]},
+  {q:"Какой результат хочешь получить?", a:[["Уверенно сдать, 70–80 баллов","mid"],["Высокий балл, 90+","high"],["Пока не знаю, начинаю с нуля","zero"]]},
+  {q:"Сколько поддержки тебе нужно?", a:[["Справлюсь сам, нужен наставник для проверки","self"],["Хочу индивидуальные задания и созвоны","close"]]}
+];
+let qi=0, qa=[];
+function startQuiz(){ qi=0; qa=[]; renderQ(); }
+function renderQ(){
+  $('#qBar').style.width=(qi/QUIZ.length*100)+'%';
+  if(qi>=QUIZ.length) return renderResult();
+  const s=QUIZ[qi];
+  $('#qBody').innerHTML=`<p style="font-weight:700;color:var(--muted)">Вопрос ${qi+1} из ${QUIZ.length}</p><h3 style="margin-top:6px">${s.q}</h3>
+    <div class="q-opts">${s.a.map(([t,v])=>`<button class="q-opt" data-v="${v}">${t}</button>`).join('')}</div>`;
+}
+$('#qBody').addEventListener('click',e=>{
+  const o=e.target.closest('.q-opt'); if(o){ qa.push(o.dataset.v); qi++; renderQ(); return; }
+  const go=e.target.closest('[data-goto]'); if(go){ closeModal(); pickTariff(go.dataset.goto, go.dataset.grade); }
+  if(e.target.closest('[data-restart]')) startQuiz();
+});
+function renderResult(){
+  const [g,goal,sup]=qa;
+  const id = g==='10' ? 'h10' : (goal==='high'||sup==='close') ? 'h11-plus' : 'h11-std';
+  const t = TARIFFS[g].find(x=>x.id===id);
+  $('#qBody').innerHTML=`<p style="font-weight:700;color:var(--muted)">Тебе подойдёт</p>
+    <div class="q-res"><span class="chip chip-ochre">${t.tags[0]}</span><b>${t.title}</b><p>${t.note||'Сбалансированная нагрузка и наставник на весь год'} · ${fmt(t.price)} ₽/мес</p></div>
+    <button class="btn btn-primary" style="width:100%" data-goto="${id}" data-grade="${g}">Перейти к тарифу</button>
+    <button class="btn" style="width:100%;margin-top:8px" data-restart>Пройти заново</button>`;
+}
+function pickTariff(id,g){
+  const tab=$(`#gradeTabs [data-grade="${g}"]`); if(tab) tab.click();
+  requestAnimationFrame(()=>{
+    const c=document.getElementById(id); if(!c) return;
+    $('#tariffs').scrollIntoView({behavior:'smooth'});
+    track.scrollTo({left:c.offsetLeft-track.offsetLeft,behavior:'smooth'});
+    c.classList.add('flash'); setTimeout(()=>c.classList.remove('flash'),2000);
+  });
+}
+</script>
+</body>
+</html>
